@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Groceries</title>
+  </head>
+  <h1>Groceries</h1>
+  <body>
+    <ul>
+      <% @grocery_list.each do |item| %>
+
+          <li>
+            <%= item%>
+          </li>
+
+      <% end %>
+    </ul>
+
+    <form action="/groceries" method="post">
+      <fieldset
+        <legend>Shopping cart</legend><br><br>
+
+        <label for="grocery_list">Name</label>
+        <input type="text" name="grocery_list" id="grocery_list" placeholder="Desired Items">
+
+        <label for="grocery_number">Quantity</label>
+        <input type="values" name="grocery_number" id="grocery_number" placeholder="Number Of Items">
+
+        <input type="submit" value="Add">
+      </fieldset>
+    </form>
+
+
+
+  </body>
+</html>
